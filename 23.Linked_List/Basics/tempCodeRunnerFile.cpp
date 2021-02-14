@@ -1,0 +1,1 @@
+DeleteHead(head);
