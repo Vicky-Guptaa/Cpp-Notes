@@ -32,7 +32,7 @@ int main() {
     int n;
     cout<<"Enter Any Number : ";
     cin>>n;
-    Binary(n);
-    // cout<<Binary(n,0)<<endl;
+    // Binary(n);
+    cout<<Binary1(n,0)<<endl;
     return 0;
 }

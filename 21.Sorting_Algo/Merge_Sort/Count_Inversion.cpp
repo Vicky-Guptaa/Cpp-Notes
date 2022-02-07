@@ -22,7 +22,7 @@ long long Merge(int arr[],int i,int mid,int n)
 
     while(x<n1&&y<n2)
     {
-        if(arr1[x]<arr2[y])
+        if(arr1[x]<=arr2[y])
         {
             arr[z]=arr1[x];
             x++;
@@ -54,16 +54,17 @@ long long Merge(int arr[],int i,int mid,int n)
 
 long long Merge_Sort(int arr[],int i,int n)
 {
+    int Inv_Count=0;
     long long Inversion=0;
     if(i<n)
     {
         int mid=(i+n)/2;
-        Inversion+=Merge_Sort(arr,i,mid);
-        Inversion+=Merge_Sort(arr,mid+1,n);
+        Inv_Count+=Inversion+=Merge_Sort(arr,i,mid);
+        Inv_Count+=Inversion+=Merge_Sort(arr,mid+1,n);
         
-        Inversion+=Merge(arr,i,mid,n);
+        Inv_Count+=Merge(arr,i,mid,n);
     }
-    return Inversion;
+    return Inv_Count;
 }
 
 int main() {
@@ -79,10 +80,5 @@ int main() {
     }
 
     cout<<Merge_Sort(arr,0,n)<<endl;
-
-    for(int i=0;i<n;i++)
-    {
-        cout<<arr[i]<<" ";
-    }
     return 0;
 }

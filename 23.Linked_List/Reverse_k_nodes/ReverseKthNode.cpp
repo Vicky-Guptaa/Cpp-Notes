@@ -83,8 +83,12 @@ int main() {
     insertAtTail(head,3);
     insertAtTail(head,4);
     insertAtTail(head,5);
+    insertAtTail(head,6);
+    insertAtTail(head,7);
+    insertAtTail(head,8);
+    
     Display(head);
-    node* newHead=ReverseKth(head,3);
+    node* newHead=ReverseKth(head,4);
     Display(newHead);
 
     return 0;

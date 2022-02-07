@@ -3,7 +3,6 @@ using namespace std;
 
 void All_Indices(int arr[],int n,int key,int i)
 {
-    static int m=0;
     if(i==n)
     {
         return;
